@@ -89,6 +89,23 @@ $(document).ready(function(){
                 ul.removeChild(li[i]);
             }
         }
+
+        
     })
+
+    $('#reset').click(function(){
+        var ul = document.getElementById('list');
+        var li = ul.children;
+         for (var i=0; i < li.length; i++) {
+            while(li[i] ) {
+                ul.removeChild(li[i]);
+            }
+        }
+        
+
+    })
+
+
+   
 })
 

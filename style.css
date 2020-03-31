@@ -108,6 +108,10 @@ body{
     background-color: #c0392b;
     border-radius: 10px;
 }
+#container .controls #reset{
+    background-color: yellowgreen;
+    border-radius: 10px;
+}
 
 #container .mycheck{
     opacity:1px;
