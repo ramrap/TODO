@@ -122,3 +122,13 @@ body{
     opacity:1 !important;
     border-radius:10px;
 }
+
+#container .copyright{
+    
+    position: relative;
+    
+    
+    font-size: 4px;
+    
+
+}
