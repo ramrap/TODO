@@ -69,6 +69,18 @@
 
 $(document).ready(function(){
     var input = $('#input').val();
+    function empty_check(){
+        var ul = document.getElementById('list');
+        var li = ul.children;
+        console.log(li.length);
+        if(li.length == 0){
+            $('#empty-warning').text('<Your TODO list is empty>');
+        }
+        else {
+            $('#empty-warning').text('');
+        }
+    }
+    empty_check();
     
     $('#add').click(function(){
         var input = $('#input').val();
@@ -78,7 +90,9 @@ $(document).ready(function(){
         else{
             var strin=`<li class='mycheck'> <input type ="checkbox" id ="check"> <label>${input}</label> </li>`
             $('#list').prepend(strin);
+            $('#input').val("");
          }
+         empty_check();
     });
 
     $('#remove').click(function(){
@@ -89,7 +103,7 @@ $(document).ready(function(){
                 ul.removeChild(li[i]);
             }
         }
-
+        empty_check();
         
     })
 
@@ -101,7 +115,7 @@ $(document).ready(function(){
                 ul.removeChild(li[i]);
             }
         }
-        
+        empty_check();
 
     })
 
