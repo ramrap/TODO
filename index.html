@@ -5,31 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOdo application</title>
     <link rel="stylesheet" href ="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    
 </head>
 <body>
-    <div id="container">
+    <div id="container" class="col-md-6">
         <div class="controls">
             <h1>My Awesome TODO</h1>
-            <input type="text" id="input"><br>
-            <button  type='button' id='add'> Add TODO</button>
-            <button type='button' id='remove'> remove done TODO</button>
-            <button type='button' id ='reset'>Reset</button>
+            <div class="form-group">
+                <button class="btn btn-info" type='button' id ='reset'>Reset TODO</button>
+            </div>
+            <br>
+            <div class="form-group">
+                <input class="form-control" type="text" id="input" placeholder="Enter the item to add">
+                <button class="btn btn-primary" type='button' id='add'> Add TODO</button>
+            </div>
 
             <p id="checkString"></p>
             
         </div>
-        <ul id="list">
-            <li class='mycheck'>
-                <input type ="checkbox" id ="check">
-                <label>Sleep</label>
-            </li>
-            <li class='mycheck'>
-                <input type ="checkbox" id ="check" checked>
-                <label>whatsapp</label>
-            </li>
-            
+        <hr>
+        <div id="empty-warning">
 
+        </div>
+        <ul id="list">
+            
         </ul>
+        <div class="form-group">
+            <button class="btn btn-danger" type='button' id='remove'> Remove selected from TODO</button>
+        </div>
 
 
         
